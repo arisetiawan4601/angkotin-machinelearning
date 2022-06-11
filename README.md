@@ -10,3 +10,30 @@
     <a href="https://hub.docker.com/repository/docker/arisetiawan4601/angkotin_container">Docker Hub</a>
   </p>
 </div>
+
+## Usage
+Endpoint
+```url
+http://34.66.224.150:8501/v1/models/angkotin_model:predict
+```
+
+
+Body
+```json
+{"instances": 
+[{"jalur":"AG","awal":120,"akhir":1110,"kecepatan":10,"cuaca":"HUJAN","jam":"16.00 - 18.00"}]
+}
+```
+
+Example 
+```sh
+curl -d '{"instances": [{"jalur":"AG","awal":120,"akhir":1120,"kecepatan":10,"cuaca":"HUJAN","jam":"16.00 - 18.00"}]}' -X POST http://34.66.224.150:8501/v1/models/angkotin_model:predict
+```
+
+Return
+```json
+{
+    "predictions": [[17.6728287]
+    ]
+}
+```
