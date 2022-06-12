@@ -27,7 +27,7 @@ Body
 
 Example 
 ```sh
-curl -d '{"instances": [{"jalur":"AG","awal":120,"akhir":1120,"kecepatan":10,"cuaca":"HUJAN","jam":"16.00 - 18.00"}]}' -X POST http://34.66.224.150:8501/v1/models/angkotin_model:predict
+curl -d '{"instances": [{"jalur":"AG","awal":120,"akhir":1120,"kecepatan":10,"cuaca":"HUJAN","jam":"16.00 - 18.00"}]}' -X POST https://34.66.224.150:8501/v1/models/angkotin_model:predict
 ```
 
 Return
